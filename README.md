@@ -8,6 +8,11 @@ Static data refers to any data that, by nature, is not frequently changing. Howe
 
 ### Request 
 GET https://aviation-edge.com/api/public/airlineDatabase?key=YOUR-API-KEY
+
+GET https://aviation-edge.com/api/public/airlineDatabase?key=YOUR-API-KEY&codeIataAirline=AA
+
+GET https://aviation-edge.com/api/public/airlineDatabase?key=YOUR-API-KEY&codeIso2Country=US
+
 ### Response
 ```
 [ 
@@ -34,6 +39,11 @@ GET https://aviation-edge.com/api/public/airlineDatabase?key=YOUR-API-KEY
 
 ### Request 
 GET https://aviation-edge.com/api/public/airplaneDatabase?key=YOUR-API-KEY
+
+GET https://aviation-edge.com/api/public/airplaneDatabase?key=YOUR-API-KEY&numberRegistration=HB-JVE
+
+GET https://aviation-edge.com/api/public/airplaneDatabase?key=YOUR-API-KEY&hexIcaoAirplane=4B19EA
+
 ### Response
 ```
 [ 
@@ -89,6 +99,10 @@ GET https://aviation-edge.com/api/public/airplaneDatabase?key=YOUR-API-KEY
 
 ### Request 
 GET https://aviation-edge.com/api/public/airportDatabase?key=YOUR-API-KEY
+
+GET https://aviation-edge.com/api/public/airportDatabase?key=YOUR-API-KEY&codeIataAirport=AAH
+
+GET https://aviation-edge.com/api/public/airportDatabase?key=YOUR-API-KEY&codeIso2Country=DE
 ### Response
 ```
 [
@@ -115,6 +129,10 @@ GET https://aviation-edge.com/api/public/airportDatabase?key=YOUR-API-KEY
 
 ### Request 
 GET https://aviation-edge.com/api/public/benchmarkAirlines?key=YOUR-API-KEY
+
+GET https://aviation-edge.com/api/public/benchmarkAirlines?key=YOUR-API-KEY&codeIataAirline=AA
+
+GET https://aviation-edge.com/api/public/benchmarkAirlines?key=YOUR-API-KEY&codeIso2Country=US
 ### Response
 ```
 [
@@ -141,6 +159,10 @@ GET https://aviation-edge.com/api/public/benchmarkAirlines?key=YOUR-API-KEY
 
 ### Request 
 GET https://aviation-edge.com/api/public/benchmarkAirports?key=YOUR-API-KEY
+
+GET https://aviation-edge.com/api/public/benchmarkAirports?key=YOUR-API-KEY&codeIataAirport=AAA
+
+GET https://aviation-edge.com/api/public/benchmarkAirports?key=YOUR-API-KEY&codeIso2Country=PF
 ### Response
 ```
 [
@@ -160,6 +182,10 @@ GET https://aviation-edge.com/api/public/benchmarkAirports?key=YOUR-API-KEY
 
 ### Request 
 GET https://aviation-edge.com/api/public/benchmarkCities?key=YOUR-API-KEY
+
+GET https://aviation-edge.com/api/public/benchmarkCities?key=YOUR-API-KEY&codeIataCity=AAA
+
+GET https://aviation-edge.com/api/public/benchmarkCities?key=YOUR-API-KEY&codeIso2Country=PF
 ### Response
 ```
 [
@@ -178,6 +204,10 @@ GET https://aviation-edge.com/api/public/benchmarkCities?key=YOUR-API-KEY
 
 ### Request 
 GET https://aviation-edge.com/api/public/cityDatabase?key=YOUR-API-KEY
+
+GET https://aviation-edge.com/api/public/cityDatabase?key=YOUR-API-KEY&codeIataCity=AAA
+
+GET https://aviation-edge.com/api/public/cityDatabase?key=YOUR-API-KEY&codeIso2Country=PF
 ### Response
 ```
 [
@@ -200,6 +230,10 @@ GET https://aviation-edge.com/api/public/cityDatabase?key=YOUR-API-KEY
 
 ### Request 
 GET https://aviation-edge.com/api/public/countryDatabase?key=YOUR-API-KEY
+
+GET https://aviation-edge.com/api/public/countryDatabase?key=YOUR-API-KEY&codeIso2Country=AD
+
+GET https://aviation-edge.com/api/public/countryDatabase?key=YOUR-API-KEY&nameCountry=Andorra
 ### Response
 ```
 [
@@ -225,6 +259,8 @@ GET https://aviation-edge.com/api/public/countryDatabase?key=YOUR-API-KEY
 
 ### Request 
 GET https://aviation-edge.com/api/public/taxDatabase?key=YOUR-API-KEY
+
+GET https://aviation-edge.com/api/public/taxDatabase?key=YOUR-API-KEY&codeIataTax=AB
 ### Response
 ```
 [
