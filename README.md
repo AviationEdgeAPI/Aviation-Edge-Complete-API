@@ -8,7 +8,7 @@ Static data refers to any data that, by nature, is not frequently changing. Howe
 
 ### Request 
 GET https://aviation-edge.com/api/public/airlineDatabase?key=YOUR-API-KEY
-### Responce
+### Response
 ```
 [ 
     { 
@@ -34,7 +34,7 @@ GET https://aviation-edge.com/api/public/airlineDatabase?key=YOUR-API-KEY
 
 ### Request 
 GET https://aviation-edge.com/api/public/airplaneDatabase?key=YOUR-API-KEY
-### Responce
+### Response
 ```
 [ 
     { 
@@ -89,7 +89,7 @@ GET https://aviation-edge.com/api/public/airplaneDatabase?key=YOUR-API-KEY
 
 ### Request 
 GET https://aviation-edge.com/api/public/airportDatabase?key=YOUR-API-KEY
-### Responce
+### Response
 ```
 [
     {
@@ -115,7 +115,7 @@ GET https://aviation-edge.com/api/public/airportDatabase?key=YOUR-API-KEY
 
 ### Request 
 GET https://aviation-edge.com/api/public/benchmarkAirlines?key=YOUR-API-KEY
-### Responce
+### Response
 ```
 [
     {
@@ -141,7 +141,7 @@ GET https://aviation-edge.com/api/public/benchmarkAirlines?key=YOUR-API-KEY
 
 ### Request 
 GET https://aviation-edge.com/api/public/benchmarkAirports?key=YOUR-API-KEY
-### Responce
+### Response
 ```
 [
     {
@@ -160,7 +160,7 @@ GET https://aviation-edge.com/api/public/benchmarkAirports?key=YOUR-API-KEY
 
 ### Request 
 GET https://aviation-edge.com/api/public/benchmarkCities?key=YOUR-API-KEY
-### Responce
+### Response
 ```
 [
     {
@@ -178,7 +178,7 @@ GET https://aviation-edge.com/api/public/benchmarkCities?key=YOUR-API-KEY
 
 ### Request 
 GET https://aviation-edge.com/api/public/cityDatabase?key=YOUR-API-KEY
-### Responce
+### Response
 ```
 [
     {
@@ -200,7 +200,7 @@ GET https://aviation-edge.com/api/public/cityDatabase?key=YOUR-API-KEY
 
 ### Request 
 GET https://aviation-edge.com/api/public/countryDatabase?key=YOUR-API-KEY
-### Responce
+### Response
 ```
 [
     {
@@ -225,7 +225,7 @@ GET https://aviation-edge.com/api/public/countryDatabase?key=YOUR-API-KEY
 
 ### Request 
 GET https://aviation-edge.com/api/public/taxDatabase?key=YOUR-API-KEY
-### Responce
+### Response
 ```
 [
     {
@@ -244,7 +244,7 @@ Dynamic data refers to any data that requires constant or frequent tracking. The
 
 ### Request 
 GET https://aviation-edge.com/api/public/flights?key=YOUR-API-KEY
-### Responce
+### Response
 ```
 [
     {
@@ -294,7 +294,7 @@ GET https://aviation-edge.com/api/public/flights?key=YOUR-API-KEY
 
 ### Request 
 GET https://aviation-edge.com/api/public/nearby?key=YOUR-API-KEY&lat=-6.1744&lng=122.111
-### Responce
+### Response
 ```
 [
     {
@@ -320,7 +320,7 @@ GET https://aviation-edge.com/api/public/nearby?key=YOUR-API-KEY&lat=-6.1744&lng
 
 ### Request 
 GET https://aviation-edge.com/api/public/routes?key=YOUR-API-KEY
-### Responce
+### Response
 ```
 [
     {
@@ -350,7 +350,7 @@ GET https://aviation-edge.com/api/public/routes?key=YOUR-API-KEY
 
 ### Request 
 GET https://aviation-edge.com/api/public/timetable?key=YOUR-API-KEY
-### Responce
+### Response
 ```
 [
     {
@@ -405,7 +405,7 @@ GET https://aviation-edge.com/api/public/timetable?key=YOUR-API-KEY
 
 ### Request 
 GET https://aviation-edge.com/api/public/autocomplete?key=YOUR-API-KEY
-### Responce
+### Response
 ```
 {
     "countries": [
