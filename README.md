@@ -280,6 +280,10 @@ Dynamic data refers to any data that requires constant or frequent tracking. The
 
 ### Request 
 GET https://aviation-edge.com/api/public/flights?key=YOUR-API-KEY
+
+GET https://aviation-edge.com/api/public/flights?key=YOUR-API-KEY&departure[iataCode]=HBE
+
+GET https://aviation-edge.com/api/public/flights?key=YOUR-API-KEY&flight[iataNumber]=MS653
 ### Response
 ```
 [
@@ -330,6 +334,8 @@ GET https://aviation-edge.com/api/public/flights?key=YOUR-API-KEY
 
 ### Request 
 GET https://aviation-edge.com/api/public/nearby?key=YOUR-API-KEY&lat=-6.1744&lng=122.111
+
+GET https://aviation-edge.com/api/public/nearby?key=YOUR-API-KEY&lat=-6.1744&lng=122.111&distance=1000
 ### Response
 ```
 [
@@ -356,7 +362,10 @@ GET https://aviation-edge.com/api/public/nearby?key=YOUR-API-KEY&lat=-6.1744&lng
 
 ### Request 
 GET https://aviation-edge.com/api/public/routes?key=YOUR-API-KEY
-### Response
+
+GET https://aviation-edge.com/api/public/routes?key=YOUR-API-KEY&departureIata=CDG
+
+GET https://aviation-edge.com/api/public/routes?key=YOUR-API-KEY&departureIcao=LFPG
 ```
 [
     {
@@ -386,6 +395,8 @@ GET https://aviation-edge.com/api/public/routes?key=YOUR-API-KEY
 
 ### Request 
 GET https://aviation-edge.com/api/public/timetable?key=YOUR-API-KEY
+
+GET https://aviation-edge.com/api/public/timetable?key=YOUR-API-KEY&iataCode=LGA&type=departure
 ### Response
 ```
 [
@@ -440,7 +451,7 @@ GET https://aviation-edge.com/api/public/timetable?key=YOUR-API-KEY
 ## Autocomplete
 
 ### Request 
-GET https://aviation-edge.com/api/public/autocomplete?key=YOUR-API-KEY
+GET https://aviation-edge.com/api/public/autocomplete?key=YOUR-API-KEY&query=India
 ### Response
 ```
 {
