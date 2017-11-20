@@ -59,6 +59,7 @@ GET https://aviation-edge.com/api/public/airplaneDatabase?key=api_key&hexIcaoAir
       "codeIataPlaneLong": "F100", 
       "constructionNumber": "11459", 
       "numberTestRgistration": "PH-EZD", 
+      "planeClass": 
       [ 
           { 
               "name": "Economy", 
@@ -90,7 +91,6 @@ GET https://aviation-edge.com/api/public/airplaneDatabase?key=api_key&hexIcaoAir
       "enginesType": "JET", 
       "planeAge": "24", 
       "planeStatus": "active", 
-      "planeClass": 
     } 
  ]
 ```
