@@ -14,7 +14,7 @@ GET https://aviation-edge.com/api/public/airlineDatabase?key=YOUR-API-KEY&codeIa
 GET https://aviation-edge.com/api/public/airlineDatabase?key=YOUR-API-KEY&codeIso2Country=US
 
 ### Response
-```json
+```
 [ 
     { 
         "airlineId": "1", 
