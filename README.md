@@ -7,11 +7,11 @@ Aviation edge data refers to any data that, by nature, is not frequently changin
 ## Airlines
 
 ### Request 
-GET https://aviation-edge.com/api/public/airlineDatabase?key=API_KEY
+GET https://aviation-edge.com/api/public/airlineDatabase?key=api_key
 
-GET https://aviation-edge.com/api/public/airlineDatabase?key=API_KEY&codeIataAirline=AA
+GET https://aviation-edge.com/api/public/airlineDatabase?key=api_key&codeIataAirline=AA
 
-GET https://aviation-edge.com/api/public/airlineDatabase?key=API_KEY&codeIso2Country=US
+GET https://aviation-edge.com/api/public/airlineDatabase?key=api_key&codeIso2Country=US
 
 ### Response
 ```
@@ -38,11 +38,11 @@ GET https://aviation-edge.com/api/public/airlineDatabase?key=API_KEY&codeIso2Cou
 ## Airplanes
 
 ### Request 
-GET https://aviation-edge.com/api/public/airplaneDatabase?key=API_KEY
+GET https://aviation-edge.com/api/public/airplaneDatabase?key=api_key
 
-GET https://aviation-edge.com/api/public/airplaneDatabase?key=API_KEY&numberRegistration=HB-JVE
+GET https://aviation-edge.com/api/public/airplaneDatabase?key=api_key&numberRegistration=HB-JVE
 
-GET https://aviation-edge.com/api/public/airplaneDatabase?key=API_KEY&hexIcaoAirplane=4B19EA
+GET https://aviation-edge.com/api/public/airplaneDatabase?key=api_key&hexIcaoAirplane=4B19EA
 
 ### Response
 ```
@@ -98,11 +98,11 @@ GET https://aviation-edge.com/api/public/airplaneDatabase?key=API_KEY&hexIcaoAir
 ## Airport
 
 ### Request 
-GET https://aviation-edge.com/api/public/airportDatabase?key=API_KEY
+GET https://aviation-edge.com/api/public/airportDatabase?key=api_key
 
-GET https://aviation-edge.com/api/public/airportDatabase?key=API_KEY&codeIataAirport=AAH
+GET https://aviation-edge.com/api/public/airportDatabase?key=api_key&codeIataAirport=AAH
 
-GET https://aviation-edge.com/api/public/airportDatabase?key=API_KEY&codeIso2Country=DE
+GET https://aviation-edge.com/api/public/airportDatabase?key=api_key&codeIso2Country=DE
 ### Response
 ```
 [
@@ -127,11 +127,11 @@ GET https://aviation-edge.com/api/public/airportDatabase?key=API_KEY&codeIso2Cou
 ## Airline Benchmark
 
 ### Request 
-GET https://aviation-edge.com/api/public/benchmarkAirlines?key=API_KEY
+GET https://aviation-edge.com/api/public/benchmarkAirlines?key=api_key
 
-GET https://aviation-edge.com/api/public/benchmarkAirlines?key=API_KEY&codeIataAirline=AA
+GET https://aviation-edge.com/api/public/benchmarkAirlines?key=api_key&codeIataAirline=AA
 
-GET https://aviation-edge.com/api/public/benchmarkAirlines?key=API_KEY&codeIso2Country=US
+GET https://aviation-edge.com/api/public/benchmarkAirlines?key=api_key&codeIso2Country=US
 ### Response
 ```
 [
@@ -157,11 +157,11 @@ GET https://aviation-edge.com/api/public/benchmarkAirlines?key=API_KEY&codeIso2C
 ## Airport Benchmark
 
 ### Request 
-GET https://aviation-edge.com/api/public/benchmarkAirports?key=API_KEY
+GET https://aviation-edge.com/api/public/benchmarkAirports?key=api_key
 
-GET https://aviation-edge.com/api/public/benchmarkAirports?key=API_KEY&codeIataAirport=AAA
+GET https://aviation-edge.com/api/public/benchmarkAirports?key=api_key&codeIataAirport=AAA
 
-GET https://aviation-edge.com/api/public/benchmarkAirports?key=API_KEY&codeIso2Country=PF
+GET https://aviation-edge.com/api/public/benchmarkAirports?key=api_key&codeIso2Country=PF
 ### Response
 ```
 [
@@ -180,11 +180,11 @@ GET https://aviation-edge.com/api/public/benchmarkAirports?key=API_KEY&codeIso2C
 ## City Benchmark
 
 ### Request 
-GET https://aviation-edge.com/api/public/benchmarkCities?key=API_KEY
+GET https://aviation-edge.com/api/public/benchmarkCities?key=api_key
 
-GET https://aviation-edge.com/api/public/benchmarkCities?key=API_KEY&codeIataCity=AAA
+GET https://aviation-edge.com/api/public/benchmarkCities?key=api_key&codeIataCity=AAA
 
-GET https://aviation-edge.com/api/public/benchmarkCities?key=API_KEY&codeIso2Country=PF
+GET https://aviation-edge.com/api/public/benchmarkCities?key=api_key&codeIso2Country=PF
 ### Response
 ```
 [
@@ -202,11 +202,11 @@ GET https://aviation-edge.com/api/public/benchmarkCities?key=API_KEY&codeIso2Cou
 ## City
 
 ### Request 
-GET https://aviation-edge.com/api/public/cityDatabase?key=API_KEY
+GET https://aviation-edge.com/api/public/cityDatabase?key=api_key
 
-GET https://aviation-edge.com/api/public/cityDatabase?key=API_KEY&codeIataCity=AAA
+GET https://aviation-edge.com/api/public/cityDatabase?key=api_key&codeIataCity=AAA
 
-GET https://aviation-edge.com/api/public/cityDatabase?key=API_KEY&codeIso2Country=PF
+GET https://aviation-edge.com/api/public/cityDatabase?key=api_key&codeIso2Country=PF
 ### Response
 ```
 [
@@ -227,11 +227,11 @@ GET https://aviation-edge.com/api/public/cityDatabase?key=API_KEY&codeIso2Countr
 ## Country
 
 ### Request 
-GET https://aviation-edge.com/api/public/countryDatabase?key=API_KEY
+GET https://aviation-edge.com/api/public/countryDatabase?key=api_key
 
-GET https://aviation-edge.com/api/public/countryDatabase?key=API_KEY&codeIso2Country=AD
+GET https://aviation-edge.com/api/public/countryDatabase?key=api_key&codeIso2Country=AD
 
-GET https://aviation-edge.com/api/public/countryDatabase?key=API_KEY&nameCountry=Andorra
+GET https://aviation-edge.com/api/public/countryDatabase?key=api_key&nameCountry=Andorra
 ### Response
 ```
 [
@@ -255,9 +255,9 @@ GET https://aviation-edge.com/api/public/countryDatabase?key=API_KEY&nameCountry
 ## Taxes
 
 ### Request 
-GET https://aviation-edge.com/api/public/taxDatabase?key=API_KEY
+GET https://aviation-edge.com/api/public/taxDatabase?key=api_key
 
-GET https://aviation-edge.com/api/public/taxDatabase?key=API_KEY&codeIataTax=AB
+GET https://aviation-edge.com/api/public/taxDatabase?key=api_key&codeIataTax=AB
 ### Response
 ```
 [
