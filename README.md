@@ -1,7 +1,7 @@
 # aviation-edge-api
 
 ## API Response:
-Aviation edge data refers to any data that, by nature, is not frequently changing. However, due to the size of our database, there are constantly updates happening, making this a valuable API when you have to maintain a big database yourself, make sure to check for updates frequently using your API key. The moment a change is detected we will pursue and update our database.
+Aviation edge data refers to any data that, by nature, is not frequently changing. However, due to the size of our database, there are constantly updates happening, making this a valuable API when you have to maintain a big database yourself, make sure to check for updates frequently using your API key. The moment a change is detected we will pursue and update our database :+1:.
 
 
 ## Airlines
