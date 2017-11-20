@@ -1,7 +1,7 @@
 # aviation-edge-api
 
 ## API Response:
-Aviation edge data refers to any data that, by nature, is not frequently changing. However, due to the size of our database, there are constantly updates happening, making this a valuable API when you have to maintain a big database yourself, make sure to check for updates frequently using your API key. The moment a change is detected we will pursue and update our database :+1:.
+Aviation Edge has different types of data. We maintain Dynamic and Static data. The static data refers to any data that is not frequently changing. Because of the massive amount of data out there though, even the data which is more static, has updates. That is what makes this a valuable API when you have to maintain a big database yourself, check for updates frequently using your API key. The moment a change is detected we will pursue and update our database :+1:.
 
 
 ## Airlines
@@ -59,20 +59,6 @@ GET https://aviation-edge.com/api/public/airplaneDatabase?key=api_key&hexIcaoAir
       "codeIataPlaneLong": "F100", 
       "constructionNumber": "11459", 
       "numberTestRgistration": "PH-EZD", 
-      "rolloutDate": "0000-00-00", 
-      "firstFlight": "1993-05-31T22:00:00.000Z", 
-      "deliveryDate": "1993-06-29T22:00:00.000Z", 
-      "registrationDate": "2004-05-11T22:00:00.000Z", 
-      "lineNumber": "", 
-      "planeSeries": "", 
-      "codeIataAirline": "2L", 
-      "codeIcaoAirline": "", 
-      "planeOwner": "", 
-      "enginesCount": "2", 
-      "enginesType": "JET", 
-      "planeAge": "24", 
-      "planeStatus": "active", 
-      "planeClass": 
       [ 
           { 
               "name": "Economy", 
@@ -90,7 +76,21 @@ GET https://aviation-edge.com/api/public/airplaneDatabase?key=api_key&hexIcaoAir
               "bedType": "Recliner", 
               "width": "17" 
            } 
-       ] 
+       ]      
+      "rolloutDate": "0000-00-00", 
+      "firstFlight": "1993-05-31T22:00:00.000Z", 
+      "deliveryDate": "1993-06-29T22:00:00.000Z", 
+      "registrationDate": "2004-05-11T22:00:00.000Z", 
+      "lineNumber": "", 
+      "planeSeries": "", 
+      "codeIataAirline": "2L", 
+      "codeIcaoAirline": "", 
+      "planeOwner": "", 
+      "enginesCount": "2", 
+      "enginesType": "JET", 
+      "planeAge": "24", 
+      "planeStatus": "active", 
+      "planeClass": 
     } 
  ]
 ```
