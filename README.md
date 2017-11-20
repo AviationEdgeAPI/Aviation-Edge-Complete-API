@@ -59,25 +59,6 @@ GET https://aviation-edge.com/api/public/airplaneDatabase?key=api_key&hexIcaoAir
       "codeIataPlaneLong": "F100", 
       "constructionNumber": "11459", 
       "numberTestRgistration": "PH-EZD", 
-      "planeClass": 
-      [ 
-          { 
-              "name": "Economy", 
-              "seats": "100", 
-              "pitch": "31", 
-              "bedLength": "", 
-              "bedType": "Standard", 
-              "width": "17" 
-          }, 
-          { 
-              "name": "Business", 
-              "seats": "40", 
-              "pitch": "33", 
-              "bedLength": "", 
-              "bedType": "Recliner", 
-              "width": "17" 
-           } 
-       ]      
       "rolloutDate": "0000-00-00", 
       "firstFlight": "1993-05-31T22:00:00.000Z", 
       "deliveryDate": "1993-06-29T22:00:00.000Z", 
