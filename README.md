@@ -1,7 +1,12 @@
-# aviation-edge-api
+# Aviation Edge API
 
 ## API Response:
-Aviation Edge has different types of data. We maintain Dynamic and Static data. The static data refers to any data that is not frequently changing. Because of the massive amount of data out there though, even the data which is more static, has updates. That is what makes this a valuable API when you have to maintain a big database yourself, check for updates frequently using your API key. The moment a change is detected we will pursue and update our database :+1:.
+Aviation Edge has various types of aviation data. We maintain both dynamic  (such as real-time aircraft tracking data or airport timetable data) and static data (such as non-frequently changing airlines, airplanes, airports, cities, countries, etc. databases in API form). Both the dynamic and static data is updated as necessary to ensure accuracy. The complete aviation data requires 1 API key to access which will return the latest result always when you refresh the data. This is the main advantage of Aviation Edge APIs, to make sure you do not have to collect your own data, maintain your own database and check for updates constantly from multiple sources.
+
+## Flights Tracker API
+
+### Request 
+
 
 
 ## Airlines
