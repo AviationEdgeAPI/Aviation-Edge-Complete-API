@@ -93,7 +93,6 @@ GET http://aviation-edge.com/v2/public/timetable?key=[API_KEY]&iataCode=JFK&type
 
 Status can be: (landed, scheduled, cancelled, active, incident, diverted, redirected, unknown)
 
-
 ### Response
 ```
 [
@@ -209,7 +208,6 @@ For the flights that are scheduled to depart from a certain airport on a certain
 
 GET https://aviation-edge.com/v2/public/flightsFuture?key=[API_KEY]&type=arrival&iataCode=BER&dep_iataCode=ory&date=YYYY-MM-DD
 
-
 ### Response
 ```
 [
@@ -245,18 +243,149 @@ GET https://aviation-edge.com/v2/public/flightsFuture?key=[API_KEY]&type=arrival
 ]
 ```
 
+## Autocomplete API
+
+### Request 
+Airports with the letters containing "abc" in them:
+
+GET http://aviation-edge.com/v2/public/autocomplete?key=[API_KEY]&city=ams
+
+### Response
+```
+[
+{
+"code": "AMS",
+"name": "Amsterdam",
+"cityCode": "AMS",
+"cityName": "Amsterdam",
+"countryCode": "NL",
+"countryName": "Netherlands",
+"lat": 52.3730556, "lng": 4.8922222,
+"timezone": "Europe/Amsterdam",
+"type": "city" } ],
+"airports":
+[
+{
+"code": "ZYA",
+"name": "Amsterdam Centraal Railway Station",
+"cityCode": "AMS",
+"cityName": "Amsterdam",
+"countryCode": "NL",
+"countryName": "Netherlands",
+"lat": 52.3730556,
+"lng": 4.8922222,
+"timezone": "Europe/Amsterdam",
+"type": "rail_station",
+"isRailRoad": 1,
+"isBusStation": 0 },
+{
+"code": "AMS",
+"name": "Schiphol",
+"cityCode": "AMS",
+"cityName": "Amsterdam",
+"countryCode": "NL",
+"countryName": "Netherlands",
+"lat": 52.30907,
+"lng": 4.763385,
+"timezone": "Europe/Amsterdam",
+"type": "airport",
+"isRailRoad": 0,
+"isBusStation": 0 } ],
+"airportsByCities":
+},
+...
+]
+```
+
+## Airline Routes API
+
+### Request 
+Static data on routes related to specific airports, airlines or flights:
+
+GET http://aviation-edge.com/v2/public/routes?key=[API_KEY]&departureIata=OTP
+GET http://aviation-edge.com/v2/public/routes?key=[API_KEY]&departureIcao=LROP
+GET http://aviation-edge.com/v2/public/routes?key=[API_KEY]&airlineIata=0B
+GET http://aviation-edge.com/v2/public/routes?key=[API_KEY]&airlineIcao=BMS
+GET http://aviation-edge.com/v2/public/routes?key=[API_KEY]&flightNumber=101
+
+Data on a specific route:
+
+GET http://aviation-edge.com/v2/public/routes?key=[API_KEY]&departureIata=OTP&departureIcao=LROP&airlineIata=0B&airlineIcao=BMS&flightNumber=101
+
+### Response
+```
+[
+{ "departureIata": "OTP",
+"departureIcao": "LROP",
+"departureTerminal": null,
+"departureTime": "09:15:00",
+"arrivalIata": "TRN",
+"arrivalIcao": "LIMF",
+"arrivalTerminal": null,
+"arrivalTime": "10:45:00",
+"airlineIata": "0B",
+"airlineIcao": "BMS",
+"flightNumber": "101",
+"codeshares": null,
+"regNumber": "YR-BAP"
+}
+]
+```
+
+## Nearby API
+
+### Request 
+Airports and cities nearby a certain latitude or longitude, within a certain distance in radius:
+GET http://aviation-edge.com/v2/public/nearby?key=[API_KEY]&lat=-5.466667&lng=122.6333&distance=100
+
+### Response
+```
+[
+{
+"code": "BUW",
+"icao": "WAWB",
+"name": "Baubau",
+"cityCode": "BUW",
+"cityName": "Baubau",
+"countryCode": "ID",
+"countryName": "Indonesia",
+"lat": -5.466667,
+"lng": 122.63333,
+"timezone": "Asia/Makassar",
+"type": "airport",
+"isRailRoad": 0,
+"isBusStation": 0, "distance": 0 },
+{
+"code": "RAQ",
+"icao": "WAWR",
+"name": "Sugimanuru",
+"cityCode": "RAQ",
+"cityName": "Raha",
+"countryCode": "ID",
+"countryName": "Indonesia",
+"lat": -4.916667,
+"lng": 122.583336,
+"timezone": "Asia/Makassar",
+"type": "airport",
+"isRailRoad": 0,
+"isBusStation": 0,
+"distance": 61404
+}
+]
+```
+
 ## Airlines API
 
 ### Request 
-For the entire database of airlines.
+Entire database of airlines:
 
 GET https://aviation-edge.com/v2/public/airlineDatabase?key=[API_KEY]
 
-For information about a specific airline, you can search based on IATA airline code. 
+Data on a specific airline, you can search based on IATA airline code:
 
 GET https://aviation-edge.com/v2/public/airlineDatabase?key=[API_KEY]&codeIataAirline=AA
 
-Search for the airlines based on the country codes. 
+Airlines based on the country code:
 
 GET https://aviation-edge.com/v2/public/airlineDatabase?key=[API_KEY]&codeIso2Country=US
 
@@ -285,19 +414,19 @@ GET https://aviation-edge.com/v2/public/airlineDatabase?key=[API_KEY]&codeIso2Co
 ## Airplanes API
 
 ### Request 
-For the entire database of airplanes. 
+Entire database of airplanes:
 
 GET https://aviation-edge.com/v2/public/airplaneDatabase?key=[API_KEY]
 
-For information about a specific airplane, you can search based on registration number. 
+Data on a specific airplane based on registration number. 
 
 GET https://aviation-edge.com/v2/public/airplaneDatabase?key=[API_KEY]&numberRegistration=HB-JVE
 
-For the airplanes based on the hex ICAO code. 
+Airplanes based on the hex ICAO code. 
 
 GET https://aviation-edge.com/v2/public/airplaneDatabase?key=[API_KEY]&hexIcaoAirplane=4B19EA
 
-For information about airplanes of a specific airline, you can search based on airline IATA code. 
+Data on airplanes of a specific airline based on airline IATA code. 
 
 GET https://aviation-edge.com/v2/public/airplaneDatabase?key=[API_KEY]&codeIataAirline=0B
 
@@ -333,18 +462,59 @@ GET https://aviation-edge.com/v2/public/airplaneDatabase?key=[API_KEY]&codeIataA
  ]
 ```
 
+## Airplane-Types API
+
+### Request 
+Entire database of Aircraft types:
+
+GET https://aviation-edge.com/v2/public/planeTypeDatabase?key=[API_KEY]
+
+Data on a specific Aircraft type based on the IATA code:
+
+GET https://aviation-edge.com/v2/public/planeTypeDatabase?key=[API_KEY]&codeIataAircraft=100
+
+### Response
+```
+[
+{
+"planeTypeId": "100",
+"nameAircraft": "Boeing 767-200 Freighter",
+"codeIataAircraft": "76X"
+},
+{
+"planeTypeId": "101",
+"nameAircraft": "Boeing 767-300 Freighter",
+"codeIataAircraft": "76Y"
+},
+{
+"planeTypeId": "102",
+"nameAircraft": "Boeing 777-200/200ER",
+"codeIataAircraft": "772"
+},
+{ "planeTypeId": "103",
+"nameAircraft": "Boeing 777-300",
+"codeIataAircraft": "773"
+},
+{ "planeTypeId": "104",
+"nameAircraft": "Boeing 777",
+"codeIataAircraft": "777"
+},
+...
+]
+```
+
 ## Airports API
 
 ### Request 
-For the entire database of airports. 
+Entire database of airports:
 
 GET https://aviation-edge.com/v2/public/airportDatabase?key=[API_KEY]
 
-For information about a specific airport, you can search based on IATA code. 
+Data on a specific airport based on IATA code:
 
 GET https://aviation-edge.com/v2/public/airportDatabase?key=[API_KEY]&codeIataAirport=AAH
 
-For the airports based on the country code. 
+Airports in a country:
 
 GET https://aviation-edge.com/v2/public/airportDatabase?key=[API_KEY]&codeIso2Country=DE
 
@@ -372,15 +542,15 @@ GET https://aviation-edge.com/v2/public/airportDatabase?key=[API_KEY]&codeIso2Co
 ## Cities API
 
 ### Request 
-For the entire database of city benchmark. 
+Entire database of cities. 
 
 GET https://aviation-edge.com/v2/public/cityDatabase?key=[API_KEY]
 
-For information about a specific city benchmark information, you can search based on IATA code. 
+Data on a specific city based on IATA code. 
 
 GET https://aviation-edge.com/v2/public/cityDatabase?key=[API_KEY]&codeIataCity=AAA 
 
-For the city benchmark information based on the country code. 
+Cities in a specific country:
 
 GET https://aviation-edge.com/v2/public/cityDatabase?key=[API_KEY]&codeIso2Country=PF
 
@@ -404,15 +574,15 @@ GET https://aviation-edge.com/v2/public/cityDatabase?key=[API_KEY]&codeIso2Count
 ## Countries API
 
 ### Request 
-For the entire database of countries. 
+Entire database of countries:
 
 GET https://aviation-edge.com/v2/public/countryDatabase?key=[API_KEY]
 
-For information about a specific country, you can search based on ISO code. 
+Data on a specific country based on ISO code:
 
 GET https://aviation-edge.com/v2/public/countryDatabase?key=[API_KEY]&codeIso2Country=AD 
 
-For the country information based on the country name. 
+Data on a specific country based on name: 
 
 GET https://aviation-edge.com/v2/public/countryDatabase?key=[API_KEY]&nameCountry=Andorra
 
@@ -439,11 +609,11 @@ GET https://aviation-edge.com/v2/public/countryDatabase?key=[API_KEY]&nameCountr
 ## Taxes API
 
 ### Request 
-For the entire database of taxes.
+Entire database of taxes:
 
 GET https://aviation-edge.com/v2/public/taxDatabase?key=[API_KEY]
 
-For information about a specific tax code, input the IATA tax code.
+Data on about a specific tax code, input the IATA tax code.
 
 GET https://aviation-edge.com/v2/public/taxDatabase?key=[API_KEY]&codeIataTax=AC 
 
