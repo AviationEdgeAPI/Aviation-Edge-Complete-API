@@ -336,6 +336,7 @@ GET http://aviation-edge.com/v2/public/routes?key=[API_KEY]&departureIata=OTP&de
 
 ### Request 
 Airports and cities nearby a certain latitude or longitude, within a certain distance in radius:
+
 GET http://aviation-edge.com/v2/public/nearby?key=[API_KEY]&lat=-5.466667&lng=122.6333&distance=100
 
 ### Response
