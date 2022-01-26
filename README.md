@@ -190,14 +190,75 @@ The maximum date range can be 30 days which may be reduced to 3-5 days for large
 ]
 ```
 
-## Airlines
+## Future Airport Schedules API
 
 ### Request 
-GET https://aviation-edge.com/api/public/airlineDatabase?key=api_key
+For the departure schedule of a certain airport on a certain future date.
 
-GET https://aviation-edge.com/api/public/airlineDatabase?key=api_key&codeIataAirline=AA
+GET http://aviation-edge.com/v2/public/flightsFuture?key=[API_KEY]&type=departure&iataCode=BER&date=YYYY-MM-DD
 
-GET https://aviation-edge.com/api/public/airlineDatabase?key=api_key&codeIso2Country=US
+For the arrival schedule of a certain airport on a certain future date.
+
+GET http://aviation-edge.com/v2/public/flightsFuture?key=[API_KEY]&type=arrival&iataCode=BER&date=YYYY-MM-DD
+
+For the flights that are scheduled to arrive at a certain airport on a certain date (out of a departure schedule).
+
+GET http://aviation-edge.com/v2/public/flightsFuture?key=[API_KEY]&type=departure&iataCode=BER&arr_iataCode=ORY&date=YYYY-MM-DD
+
+For the flights that are scheduled to depart from a certain airport on a certain date (out of an arrival schedule).
+
+GET https://aviation-edge.com/v2/public/flightsFuture?key=[API_KEY]&type=arrival&iataCode=BER&dep_iataCode=ory&date=YYYY-MM-DD
+
+
+### Response
+```
+[
+{"weekday": "1",
+"departure": 
+{
+"iataCode": "mty",
+"icaoCode": "mmmy",
+"terminal": "c",
+"gate": "f2",
+"scheduledTime": "20:35"
+}, 
+"arrival": 
+{"iataCode": "iah", 
+"icaoCode": "kiah",
+"terminal": "d", 
+"gate": "d12", 
+"scheduledTime": "22:00"
+}, 
+"aircraft": 
+{"modelCode": "a320", 
+"modelText": "airbus a320-232"
+},
+"airline": 
+{"name": "vivaaerobus",
+"iataCode": "vb", 
+"icaoCode": "viv"}, 
+"flight": 
+{"number": "616", 
+"iataNumber": "vb616", 
+"icaoNumber": "viv616"}
+}
+]
+```
+
+## Airlines API
+
+### Request 
+For the entire database of airlines.
+
+GET https://aviation-edge.com/v2/public/airlineDatabase?key=[API_KEY]
+
+For information about a specific airline, you can search based on IATA airline code. 
+
+GET https://aviation-edge.com/v2/public/airlineDatabase?key=[API_KEY]&codeIataAirline=AA
+
+Search for the airlines based on the country codes. 
+
+GET https://aviation-edge.com/v2/public/airlineDatabase?key=[API_KEY]&codeIso2Country=US
 
 ### Response
 ```
@@ -221,14 +282,24 @@ GET https://aviation-edge.com/api/public/airlineDatabase?key=api_key&codeIso2Cou
 ]
 ```
 
-## Airplanes
+## Airplanes API
 
 ### Request 
-GET https://aviation-edge.com/api/public/airplaneDatabase?key=api_key
+For the entire database of airplanes. 
 
-GET https://aviation-edge.com/api/public/airplaneDatabase?key=api_key&numberRegistration=HB-JVE
+GET https://aviation-edge.com/v2/public/airplaneDatabase?key=[API_KEY]
 
-GET https://aviation-edge.com/api/public/airplaneDatabase?key=api_key&hexIcaoAirplane=4B19EA
+For information about a specific airplane, you can search based on registration number. 
+
+GET https://aviation-edge.com/v2/public/airplaneDatabase?key=[API_KEY]&numberRegistration=HB-JVE
+
+For the airplanes based on the hex ICAO code. 
+
+GET https://aviation-edge.com/v2/public/airplaneDatabase?key=[API_KEY]&hexIcaoAirplane=4B19EA
+
+For information about airplanes of a specific airline, you can search based on airline IATA code. 
+
+GET https://aviation-edge.com/v2/public/airplaneDatabase?key=[API_KEY]&codeIataAirline=0B
 
 ### Response
 ```
@@ -262,14 +333,21 @@ GET https://aviation-edge.com/api/public/airplaneDatabase?key=api_key&hexIcaoAir
  ]
 ```
 
-## Airport
+## Airports API
 
 ### Request 
-GET https://aviation-edge.com/api/public/airportDatabase?key=api_key
+For the entire database of airports. 
 
-GET https://aviation-edge.com/api/public/airportDatabase?key=api_key&codeIataAirport=AAH
+GET https://aviation-edge.com/v2/public/airportDatabase?key=[API_KEY]
 
-GET https://aviation-edge.com/api/public/airportDatabase?key=api_key&codeIso2Country=DE
+For information about a specific airport, you can search based on IATA code. 
+
+GET https://aviation-edge.com/v2/public/airportDatabase?key=[API_KEY]&codeIataAirport=AAH
+
+For the airports based on the country code. 
+
+GET https://aviation-edge.com/v2/public/airportDatabase?key=[API_KEY]&codeIso2Country=DE
+
 ### Response
 ```
 [
@@ -291,89 +369,21 @@ GET https://aviation-edge.com/api/public/airportDatabase?key=api_key&codeIso2Cou
 ]
 ```
 
-## Airline Benchmark
+## Cities API
 
 ### Request 
-GET https://aviation-edge.com/api/public/benchmarkAirlines?key=api_key
+For the entire database of city benchmark. 
 
-GET https://aviation-edge.com/api/public/benchmarkAirlines?key=api_key&codeIataAirline=AA
+GET https://aviation-edge.com/v2/public/cityDatabase?key=[API_KEY]
 
-GET https://aviation-edge.com/api/public/benchmarkAirlines?key=api_key&codeIso2Country=US
-### Response
-```
-[
-    {
-        "benchmarkAirlinesId": "1",
-        "nameAirline": "American Airlines",
-        "codeIataAirline": "AA",
-        "codeIcaoAirline": "AAL",
-        "nameCountry": "United States",
-        "codeIso2Country": "US",
-        "statusAirline": "active",
-        "type": "scheduled",
-        "founding": "1934",
-        "ageFleet": "10.9",
-        "sizeAirline": "963",
-        "website": "aa.com",
-        "twitter": "twitter.com/AmericanAir",
-        "facebook": "facebook.com/AmericanAirlines"
-    }
-]
-```
+For information about a specific city benchmark information, you can search based on IATA code. 
 
-## Airport Benchmark
+GET https://aviation-edge.com/v2/public/cityDatabase?key=[API_KEY]&codeIataCity=AAA 
 
-### Request 
-GET https://aviation-edge.com/api/public/benchmarkAirports?key=api_key
+For the city benchmark information based on the country code. 
 
-GET https://aviation-edge.com/api/public/benchmarkAirports?key=api_key&codeIataAirport=AAA
+GET https://aviation-edge.com/v2/public/cityDatabase?key=[API_KEY]&codeIso2Country=PF
 
-GET https://aviation-edge.com/api/public/benchmarkAirports?key=api_key&codeIso2Country=PF
-### Response
-```
-[
-    {
-        "benchmarkAirportsId": "1",
-        "nameAirport": "Anaa",
-        "codeIataAirport": "AAA",
-        "nameCountry": "French Polynesia",
-        "codeIso2Country": "PF",
-        "popularity": "0",
-        "website": ""
-    }
-]
-```
-
-## City Benchmark
-
-### Request 
-GET https://aviation-edge.com/api/public/benchmarkCities?key=api_key
-
-GET https://aviation-edge.com/api/public/benchmarkCities?key=api_key&codeIataCity=AAA
-
-GET https://aviation-edge.com/api/public/benchmarkCities?key=api_key&codeIso2Country=PF
-### Response
-```
-[
-    {
-        "benchmarkCitiesId": "1",
-        "nameCity": "Anaa",
-        "codeIataCity": "AAA",
-        "nameCountry": "French Polynesia",
-        "codeIso2Country": "PF",
-        "popularity": "0"
-    }
-]
-```
-
-## City
-
-### Request 
-GET https://aviation-edge.com/api/public/cityDatabase?key=api_key
-
-GET https://aviation-edge.com/api/public/cityDatabase?key=api_key&codeIataCity=AAA
-
-GET https://aviation-edge.com/api/public/cityDatabase?key=api_key&codeIso2Country=PF
 ### Response
 ```
 [
@@ -391,14 +401,21 @@ GET https://aviation-edge.com/api/public/cityDatabase?key=api_key&codeIso2Countr
 ]
 ```
 
-## Country
+## Countries API
 
 ### Request 
-GET https://aviation-edge.com/api/public/countryDatabase?key=api_key
+For the entire database of countries. 
 
-GET https://aviation-edge.com/api/public/countryDatabase?key=api_key&codeIso2Country=AD
+GET https://aviation-edge.com/v2/public/countryDatabase?key=[API_KEY]
 
-GET https://aviation-edge.com/api/public/countryDatabase?key=api_key&nameCountry=Andorra
+For information about a specific country, you can search based on ISO code. 
+
+GET https://aviation-edge.com/v2/public/countryDatabase?key=[API_KEY]&codeIso2Country=AD 
+
+For the country information based on the country name. 
+
+GET https://aviation-edge.com/v2/public/countryDatabase?key=[API_KEY]&nameCountry=Andorra
+
 ### Response
 ```
 [
@@ -419,12 +436,17 @@ GET https://aviation-edge.com/api/public/countryDatabase?key=api_key&nameCountry
 ]
 ```
 
-## Taxes
+## Taxes API
 
 ### Request 
-GET https://aviation-edge.com/api/public/taxDatabase?key=api_key
+For the entire database of taxes.
 
-GET https://aviation-edge.com/api/public/taxDatabase?key=api_key&codeIataTax=AB
+GET https://aviation-edge.com/v2/public/taxDatabase?key=[API_KEY]
+
+For information about a specific tax code, input the IATA tax code.
+
+GET https://aviation-edge.com/v2/public/taxDatabase?key=[API_KEY]&codeIataTax=AC 
+
 ### Response
 ```
 [
