@@ -145,10 +145,6 @@ For filtering the flights of a certain airline from the arrival schedule of a ce
 
 GET http://aviation-edge.com/v2/public/flightsHistory?key=[API_KEY]&code=JFK&type=arrival&date_from=YYYY-MM-DD&&airline_iata=TK
 
-Status can be: "active" (for departure schedules only), "landed" (for arrival schedules only), "cancelled", "unknown"
-Delay amount is included in minutes if a flight was delayed at the date.
-The maximum date range can be 30 days which may be reduced to 3-5 days for large airports with heavy traffic.
-
 ### Response
 ```
 [
