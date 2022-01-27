@@ -6,7 +6,7 @@ Aviation Edge provides various types of aviation data. We maintain both dynamic 
 ## Flights Tracker API
 
 ### Request 
-To get information about all live flights in the world in one call:
+Data of all live flights in the world in one call:
 
 GET http://aviation-edge.com/v2/public/flights?key=[API_KEY]&limit=30000
 
@@ -14,15 +14,15 @@ Specific flight based on flight number:
 
 GET http://aviation-edge.com/v2/public/flights?key=[API_KEY]&flightIata=W8519
 
-All flights of a specific Airlines:
+All flights of a specific airline:
 
 GET http://aviation-edge.com/v2/public/flights?key=[API_KEY]&airlineIata=W8
 
-Flights from departure location:
+Flights from a departure location:
 
 GET http://aviation-edge.com/v2/public/flights?key=[API_KEY]&depIata=MAD
 
-Flights from arrival location:
+Flights to an arrival location:
 
 GET http://aviation-edge.com/v2/public/flights?key=[API_KEY]&arrIata=GIG
 
@@ -90,8 +90,6 @@ GET http://aviation-edge.com/v2/public/timetable?key=[API_KEY]&iataCode=JFK&type
 For the arrival schedule of a certain airport:
 
 GET http://aviation-edge.com/v2/public/timetable?key=[API_KEY]&iataCode=JFK&type=arrival
-
-Status can be: (landed, scheduled, cancelled, active, incident, diverted, redirected, unknown)
 
 ### Response
 ```
