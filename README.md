@@ -240,9 +240,9 @@ GET https://aviation-edge.com/v2/public/flightsFuture?key=[API_KEY]&type=arrival
 ## Autocomplete API
 
 ### Request 
-Airports with the letters containing "abc" in them:
+Airports with the letters containing "xyz" in them:
 
-GET http://aviation-edge.com/v2/public/autocomplete?key=[API_KEY]&city=ams
+GET http://aviation-edge.com/v2/public/autocomplete?key=[API_KEY]&city=xyz
 
 ### Response
 ```
@@ -297,10 +297,15 @@ GET http://aviation-edge.com/v2/public/autocomplete?key=[API_KEY]&city=ams
 Static data on routes related to specific airports, airlines or flights:
 
 GET http://aviation-edge.com/v2/public/routes?key=[API_KEY]&departureIata=OTP
+
 GET http://aviation-edge.com/v2/public/routes?key=[API_KEY]&departureIcao=LROP
+
 GET http://aviation-edge.com/v2/public/routes?key=[API_KEY]&airlineIata=0B
+
 GET http://aviation-edge.com/v2/public/routes?key=[API_KEY]&airlineIcao=BMS
+
 GET http://aviation-edge.com/v2/public/routes?key=[API_KEY]&flightNumber=101
+
 
 Data on a specific route:
 
