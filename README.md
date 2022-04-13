@@ -11,31 +11,31 @@ You may find input parameters, output examples with explanations for each item, 
 ### Request 
 Data of all live flights in the world in one call:
 
-**GET** http://aviation-edge.com/v2/public/flights?key=[API_KEY]&limit=30000
+**GET** `http://aviation-edge.com/v2/public/flights?key=[API_KEY]&limit=30000`
 
 Specific flight based on flight number:
 
-**GET** http://aviation-edge.com/v2/public/flights?key=[API_KEY]&flightIata=W8519
+**GET** `http://aviation-edge.com/v2/public/flights?key=[API_KEY]&flightIata=W8519`
 
 All flights of a specific airline:
 
-**GET** http://aviation-edge.com/v2/public/flights?key=[API_KEY]&airlineIata=W8
+**GET** `http://aviation-edge.com/v2/public/flights?key=[API_KEY]&airlineIata=W8`
 
 Flights from a departure location:
 
-**GET** http://aviation-edge.com/v2/public/flights?key=[API_KEY]&depIata=MAD
+**GET** `http://aviation-edge.com/v2/public/flights?key=[API_KEY]&depIata=MAD`
 
 Flights to an arrival location:
 
-**GET** http://aviation-edge.com/v2/public/flights?key=[API_KEY]&arrIata=GIG
+**GET** `http://aviation-edge.com/v2/public/flights?key=[API_KEY]&arrIata=GIG`
 
 Flights within a circle area based on lat and lng values and radius as the distance:
 
-**GET** https://aviation-edge.com/v2/public/flights?key=[API_KEY]&lat=51.5074&lng=0.1278&distance=100&arrIata=LHR
+**GET** `https://aviation-edge.com/v2/public/flights?key=[API_KEY]&lat=51.5074&lng=0.1278&distance=100&arrIata=LHR`
 
 Combinations: two airports and a specific airline flying between them:
 
-**GET** http://aviation-edge.com/v2/public/flights?key=[API_KEY]&depIata=ATL&arrIata=ORD&airlineIata=UA
+**GET** `http://aviation-edge.com/v2/public/flights?key=[API_KEY]&depIata=ATL&arrIata=ORD&airlineIata=UA`
 
 ### Response
 ```
@@ -88,11 +88,11 @@ Combinations: two airports and a specific airline flying between them:
 ### Request 
 For the departure schedule of a certain airport:
 
-**GET** http://aviation-edge.com/v2/public/timetable?key=[API_KEY]&iataCode=JFK&type=departure
+**GET** `http://aviation-edge.com/v2/public/timetable?key=[API_KEY]&iataCode=JFK&type=departure`
 
 For the arrival schedule of a certain airport:
 
-**GET** http://aviation-edge.com/v2/public/timetable?key=[API_KEY]&iataCode=JFK&type=arrival
+**GET** `http://aviation-edge.com/v2/public/timetable?key=[API_KEY]&iataCode=JFK&type=arrival`
 
 ### Response
 ```
@@ -124,27 +124,27 @@ For the arrival schedule of a certain airport:
 ### Request 
 For the departure schedule of a certain airport on a certain date:
 
-**GET** http://aviation-edge.com/v2/public/flightsHistory?key=[API_KEY]&code=JFK&type=departure&date_from=YYYY-MM-DD
+**GET** `http://aviation-edge.com/v2/public/flightsHistory?key=[API_KEY]&code=JFK&type=departure&date_from=YYYY-MM-DD`
 
 For the arrival schedule of a certain airport on a certain date:
 
-**GET** http://aviation-edge.com/v2/public/flightsHistory?key=[API_KEY]&code=JFK&type=arrival&date_from=YYYY-MM-DD
+**GET** `http://aviation-edge.com/v2/public/flightsHistory?key=[API_KEY]&code=JFK&type=arrival&date_from=YYYY-MM-DD`
 
 For the schedule of a certain airport of a certain date range (also available for arrival):
 
-**GET** http://aviation-edge.com/v2/public/flightsHistory?key=[API_KEY]&code=JFK&type=departure&date_from=YYYY-MM-DD&date_to=YYYY-MM-DD
+**GET** `http://aviation-edge.com/v2/public/flightsHistory?key=[API_KEY]&code=JFK&type=departure&date_from=YYYY-MM-DD&date_to=YYYY-MM-DD`
 
 For the schedule of a certain airport on a certain date (or range) but only flights with a certain status:
 
-**GET** http://aviation-edge.com/v2/public/flightsHistory?key=[API_KEY]&code=JFK&type=arrival&date_from=YYYY-MM-DD&date_to=YYYY-MM-DD&status=cancelled
+**GET** `http://aviation-edge.com/v2/public/flightsHistory?key=[API_KEY]&code=JFK&type=arrival&date_from=YYYY-MM-DD&date_to=YYYY-MM-DD&status=cancelled`
 
 For tracking individual historical flights:
 
-**GET** http://aviation-edge.com/v2/public/flightsHistory?key=[API_KEY]&code=JFK&type=departure&date_from=YYYY-MM-DD&date_to=YYYY-MM-DD&flight_number=[1234]
+**GET** `http://aviation-edge.com/v2/public/flightsHistory?key=[API_KEY]&code=JFK&type=departure&date_from=YYYY-MM-DD&date_to=YYYY-MM-DD&flight_number=[1234]`
 
 For filtering the flights of a certain airline from the arrival schedule of a certain airport on a certain date (also available for departure schedules and as a date range):
 
-**GET** http://aviation-edge.com/v2/public/flightsHistory?key=[API_KEY]&code=JFK&type=arrival&date_from=YYYY-MM-DD&&airline_iata=TK
+**GET** `http://aviation-edge.com/v2/public/flightsHistory?key=[API_KEY]&code=JFK&type=arrival&date_from=YYYY-MM-DD&&airline_iata=TK`
 
 ### Response
 ```
@@ -191,19 +191,19 @@ For filtering the flights of a certain airline from the arrival schedule of a ce
 ### Request 
 For the departure schedule of a certain airport on a certain future date.
 
-**GET** http://aviation-edge.com/v2/public/flightsFuture?key=[API_KEY]&type=departure&iataCode=BER&date=YYYY-MM-DD
+**GET** `http://aviation-edge.com/v2/public/flightsFuture?key=[API_KEY]&type=departure&iataCode=BER&date=YYYY-MM-DD`
 
 For the arrival schedule of a certain airport on a certain future date.
 
-**GET** http://aviation-edge.com/v2/public/flightsFuture?key=[API_KEY]&type=arrival&iataCode=BER&date=YYYY-MM-DD
+**GET** `http://aviation-edge.com/v2/public/flightsFuture?key=[API_KEY]&type=arrival&iataCode=BER&date=YYYY-MM-DD`
 
 For the flights that are scheduled to arrive at a certain airport on a certain date (out of a departure schedule).
 
-**GET** http://aviation-edge.com/v2/public/flightsFuture?key=[API_KEY]&type=departure&iataCode=BER&arr_iataCode=ORY&date=YYYY-MM-DD
+**GET** `http://aviation-edge.com/v2/public/flightsFuture?key=[API_KEY]&type=departure&iataCode=BER&arr_iataCode=ORY&date=YYYY-MM-DD`
 
 For the flights that are scheduled to depart from a certain airport on a certain date (out of an arrival schedule).
 
-**GET** https://aviation-edge.com/v2/public/flightsFuture?key=[API_KEY]&type=arrival&iataCode=BER&dep_iataCode=ory&date=YYYY-MM-DD
+**GET** `https://aviation-edge.com/v2/public/flightsFuture?key=[API_KEY]&type=arrival&iataCode=BER&dep_iataCode=ory&date=YYYY-MM-DD`
 
 ### Response
 ```
@@ -245,7 +245,7 @@ For the flights that are scheduled to depart from a certain airport on a certain
 ### Request 
 Airports with the letters containing "xyz" in them:
 
-**GET** http://aviation-edge.com/v2/public/autocomplete?key=[API_KEY]&city=xyz
+**GET** `http://aviation-edge.com/v2/public/autocomplete?key=[API_KEY]&city=xyz`
 
 ### Response
 ```
@@ -299,20 +299,20 @@ Airports with the letters containing "xyz" in them:
 ### Request 
 Static data on routes related to specific airports, airlines or flights:
 
-**GET** http://aviation-edge.com/v2/public/routes?key=[API_KEY]&departureIata=OTP
+**GET** `http://aviation-edge.com/v2/public/routes?key=[API_KEY]&departureIata=OTP`
 
-**GET** http://aviation-edge.com/v2/public/routes?key=[API_KEY]&departureIcao=LROP
+**GET** `http://aviation-edge.com/v2/public/routes?key=[API_KEY]&departureIcao=LROP`
 
-**GET** http://aviation-edge.com/v2/public/routes?key=[API_KEY]&airlineIata=0B
+**GET** `http://aviation-edge.com/v2/public/routes?key=[API_KEY]&airlineIata=0B`
 
-**GET** http://aviation-edge.com/v2/public/routes?key=[API_KEY]&airlineIcao=BMS
+**GET** `http://aviation-edge.com/v2/public/routes?key=[API_KEY]&airlineIcao=BMS`
 
-**GET** http://aviation-edge.com/v2/public/routes?key=[API_KEY]&flightNumber=101
+**GET** `http://aviation-edge.com/v2/public/routes?key=[API_KEY]&flightNumber=101`
 
 
 Data on a specific route:
 
-**GET** http://aviation-edge.com/v2/public/routes?key=[API_KEY]&departureIata=OTP&departureIcao=LROP&airlineIata=0B&airlineIcao=BMS&flightNumber=101
+**GET** `http://aviation-edge.com/v2/public/routes?key=[API_KEY]&departureIata=OTP&departureIcao=LROP&airlineIata=0B&airlineIcao=BMS&flightNumber=101`
 
 ### Response
 ```
@@ -339,7 +339,7 @@ Data on a specific route:
 ### Request 
 Airports and cities nearby a certain latitude or longitude, within a certain distance in radius:
 
-**GET** http://aviation-edge.com/v2/public/nearby?key=[API_KEY]&lat=-5.466667&lng=122.6333&distance=100
+**GET** `http://aviation-edge.com/v2/public/nearby?key=[API_KEY]&lat=-5.466667&lng=122.6333&distance=100`
 
 ### Response
 ```
@@ -382,15 +382,15 @@ Airports and cities nearby a certain latitude or longitude, within a certain dis
 ### Request 
 Entire database of airlines:
 
-**GET** https://aviation-edge.com/v2/public/airlineDatabase?key=[API_KEY]
+**GET** `https://aviation-edge.com/v2/public/airlineDatabase?key=[API_KEY]`
 
 Data on a specific airline, you can search based on IATA airline code:
 
-**GET** https://aviation-edge.com/v2/public/airlineDatabase?key=[API_KEY]&codeIataAirline=AA
+**GET** `https://aviation-edge.com/v2/public/airlineDatabase?key=[API_KEY]&codeIataAirline=AA`
 
 Airlines based on the country code:
 
-**GET** https://aviation-edge.com/v2/public/airlineDatabase?key=[API_KEY]&codeIso2Country=US
+**GET** `https://aviation-edge.com/v2/public/airlineDatabase?key=[API_KEY]&codeIso2Country=US`
 
 ### Response
 ```
@@ -419,19 +419,19 @@ Airlines based on the country code:
 ### Request 
 Entire database of airplanes:
 
-**GET** https://aviation-edge.com/v2/public/airplaneDatabase?key=[API_KEY]
+**GET** `https://aviation-edge.com/v2/public/airplaneDatabase?key=[API_KEY]`
 
 Data on a specific airplane based on registration number. 
 
-**GET** https://aviation-edge.com/v2/public/airplaneDatabase?key=[API_KEY]&numberRegistration=HB-JVE
+**GET** `https://aviation-edge.com/v2/public/airplaneDatabase?key=[API_KEY]&numberRegistration=HB-JVE`
 
 Airplanes based on the hex ICAO code. 
 
-**GET** https://aviation-edge.com/v2/public/airplaneDatabase?key=[API_KEY]&hexIcaoAirplane=4B19EA
+**GET** `https://aviation-edge.com/v2/public/airplaneDatabase?key=[API_KEY]&hexIcaoAirplane=4B19EA`
 
 Data on airplanes of a specific airline based on airline IATA code. 
 
-**GET** https://aviation-edge.com/v2/public/airplaneDatabase?key=[API_KEY]&codeIataAirline=0B
+**GET** `https://aviation-edge.com/v2/public/airplaneDatabase?key=[API_KEY]&codeIataAirline=0B`
 
 ### Response
 ```
@@ -470,11 +470,11 @@ Data on airplanes of a specific airline based on airline IATA code.
 ### Request 
 Entire database of Aircraft types:
 
-**GET** https://aviation-edge.com/v2/public/planeTypeDatabase?key=[API_KEY]
+**GET** `https://aviation-edge.com/v2/public/planeTypeDatabase?key=[API_KEY]`
 
 Data on a specific Aircraft type based on the IATA code:
 
-**GET** https://aviation-edge.com/v2/public/planeTypeDatabase?key=[API_KEY]&codeIataAircraft=100
+**GET** `https://aviation-edge.com/v2/public/planeTypeDatabase?key=[API_KEY]&codeIataAircraft=100`
 
 ### Response
 ```
@@ -511,15 +511,15 @@ Data on a specific Aircraft type based on the IATA code:
 ### Request 
 Entire database of airports:
 
-**GET** https://aviation-edge.com/v2/public/airportDatabase?key=[API_KEY]
+**GET** `https://aviation-edge.com/v2/public/airportDatabase?key=[API_KEY]`
 
 Data on a specific airport based on IATA code:
 
-**GET** https://aviation-edge.com/v2/public/airportDatabase?key=[API_KEY]&codeIataAirport=AAH
+**GET** `https://aviation-edge.com/v2/public/airportDatabase?key=[API_KEY]&codeIataAirport=AAH`
 
 Airports in a country:
 
-**GET** https://aviation-edge.com/v2/public/airportDatabase?key=[API_KEY]&codeIso2Country=DE
+**GET** `https://aviation-edge.com/v2/public/airportDatabase?key=[API_KEY]&codeIso2Country=DE`
 
 ### Response
 ```
@@ -547,15 +547,15 @@ Airports in a country:
 ### Request 
 Entire database of cities. 
 
-**GET** https://aviation-edge.com/v2/public/cityDatabase?key=[API_KEY]
+**GET** `https://aviation-edge.com/v2/public/cityDatabase?key=[API_KEY]`
 
 Data on a specific city based on IATA code. 
 
-**GET** https://aviation-edge.com/v2/public/cityDatabase?key=[API_KEY]&codeIataCity=AAA 
+**GET** `https://aviation-edge.com/v2/public/cityDatabase?key=[API_KEY]&codeIataCity=AAA`
 
 Cities in a specific country:
 
-**GET** https://aviation-edge.com/v2/public/cityDatabase?key=[API_KEY]&codeIso2Country=PF
+**GET** `https://aviation-edge.com/v2/public/cityDatabase?key=[API_KEY]&codeIso2Country=PF`
 
 ### Response
 ```
@@ -579,15 +579,15 @@ Cities in a specific country:
 ### Request 
 Entire database of countries:
 
-**GET** https://aviation-edge.com/v2/public/countryDatabase?key=[API_KEY]
+**GET** `https://aviation-edge.com/v2/public/countryDatabase?key=[API_KEY]`
 
 Data on a specific country based on ISO code:
 
-**GET** https://aviation-edge.com/v2/public/countryDatabase?key=[API_KEY]&codeIso2Country=AD 
+**GET** `https://aviation-edge.com/v2/public/countryDatabase?key=[API_KEY]&codeIso2Country=AD` 
 
 Data on a specific country based on name: 
 
-**GET** https://aviation-edge.com/v2/public/countryDatabase?key=[API_KEY]&nameCountry=Andorra
+**GET** `https://aviation-edge.com/v2/public/countryDatabase?key=[API_KEY]&nameCountry=Andorra`
 
 ### Response
 ```
@@ -614,11 +614,11 @@ Data on a specific country based on name:
 ### Request 
 Entire database of taxes:
 
-**GET** https://aviation-edge.com/v2/public/taxDatabase?key=[API_KEY]
+**GET** `https://aviation-edge.com/v2/public/taxDatabase?key=[API_KEY]`
 
 Data on about a specific tax code, input the IATA tax code.
 
-**GET** https://aviation-edge.com/v2/public/taxDatabase?key=[API_KEY]&codeIataTax=AC 
+**GET** `https://aviation-edge.com/v2/public/taxDatabase?key=[API_KEY]&codeIataTax=AC`
 
 ### Response
 ```
