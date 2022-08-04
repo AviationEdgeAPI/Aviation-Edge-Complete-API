@@ -312,7 +312,7 @@ Static data on routes related to specific airports, airlines or flights:
 
 Data on a specific route:
 
-**GET** `http://aviation-edge.com/v2/public/routes?key=[API_KEY]&departureIata=OTP&departureIcao=LROP&airlineIata=0B&airlineIcao=BMS&flightNumber=101`
+**GET** `https://aviation-edge.com/v2/public/routes?key=[API_KEY]&departureIata=OTP&departureIcao=LROP&airlineIata=0B&airlineIcao=BMS&flightNumber=101`
 
 ### Response
 ```
